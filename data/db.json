@@ -1,0 +1,97 @@
+{
+  "users": [
+    {
+      "id": "54b87500-46a6-48cf-86f9-1f8e92b403b6",
+      "name": "Vaishnavi",
+      "roll": "25115060",
+      "email": "vaishnavi@campus.edu",
+      "role": "student",
+      "contact": "+91 98765 10101"
+    },
+    {
+      "id": "5a731bec-8c53-4da6-90fc-d236cc632fee",
+      "name": "Cultural Committee",
+      "roll": "CLUB001",
+      "email": "culture@campus.edu",
+      "role": "club",
+      "contact": "culture@campus.edu"
+    },
+    {
+      "id": "9536bc1e-37fe-414b-8a52-6a380085c1e4",
+      "name": "Admin Desk",
+      "roll": "ADMIN",
+      "email": "admin@campus.edu",
+      "role": "admin",
+      "contact": "admin@campus.edu"
+    }
+  ],
+  "posts": [
+    {
+      "id": "f853d674-ed4e-4a5b-8f7e-5d4f083d8a07",
+      "userId": "54b87500-46a6-48cf-86f9-1f8e92b403b6",
+      "author": "Vaishnavi",
+      "role": "student",
+      "title": "Dinner food split from Gate 2",
+      "body": "Ordering biryani. Need 3 more people before 8:30 PM.",
+      "tag": "#foodsplit",
+      "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=900&q=80",
+      "contact": "+91 98765 10101",
+      "expiresAt": "2026-06-27T13:15:23.226Z",
+      "status": "active",
+      "pinned": false,
+      "createdAt": "2026-06-27T11:15:23.226Z"
+    },
+    {
+      "id": "86fcb678-6232-43c1-a743-d9803c8fb3df",
+      "userId": "54b87500-46a6-48cf-86f9-1f8e92b403b6",
+      "author": "Aarav Student",
+      "role": "student",
+      "title": "Lost black calculator",
+      "body": "Last seen near Mechanical block M-204.",
+      "tag": "#lost",
+      "image": "https://images.unsplash.com/photo-1564473185935-58113cba1e80?auto=format&fit=crop&w=900&q=80",
+      "contact": "+91 98765 10101",
+      "expiresAt": null,
+      "status": "active",
+      "pinned": false,
+      "createdAt": "2026-06-27T11:15:23.226Z"
+    }
+  ],
+  "official": [
+    {
+      "id": "39a23337-34fa-4fb1-a0d9-a8bd501d0795",
+      "userId": "5a731bec-8c53-4da6-90fc-d236cc632fee",
+      "author": "Cultural Committee",
+      "role": "club",
+      "title": "Open mic registrations",
+      "body": "Register using the committee form before Friday.",
+      "createdAt": "2026-06-27T11:15:23.226Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "1d447a2c-adee-430a-b853-31f4f38a9542",
+      "title": "Open Mic Night",
+      "date": "2026-06-30",
+      "time": "18:00",
+      "venue": "Main Auditorium",
+      "body": "Music, poetry, and stand-up.",
+      "owner": "Cultural Committee",
+      "status": "approved",
+      "createdAt": "2026-06-27T11:15:23.226Z"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "9ecf499c-9565-4563-87f8-2f4250028d89",
+      "title": "Library AC not working",
+      "body": "Reading hall has been hot for two days.",
+      "realUserId": "54b87500-46a6-48cf-86f9-1f8e92b403b6",
+      "realUser": "Aarav Student",
+      "status": "open",
+      "createdAt": "2026-06-27T11:15:23.226Z",
+      "resolvedAt": null
+    }
+  ],
+  "chats": {}
+}

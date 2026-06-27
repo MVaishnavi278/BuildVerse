@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campus Buzz</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <aside>
+    <h1>Campus Buzz</h1>
+    <p>Campus coordination platform</p>
+
+    <nav>
+      <button data-view="feed" class="active">Feed</button>
+      <button data-view="official">Official</button>
+      <button data-view="calendar">Calendar</button>
+      <button data-view="complaints">Complaints</button>
+      <button data-view="admin" class="adminOnly hidden">Admin</button>
+    </nav>
+
+    <section id="loginBox">
+      <h2>Login</h2>
+      <div class="quick">
+        <button data-demo="student">Student</button>
+        <button data-demo="club">Club</button>
+        <button data-demo="admin">Admin</button>
+      </div>
+      <form id="loginForm">
+        <input name="name" placeholder="Name">
+        <input name="roll" placeholder="Roll number" required>
+        <input name="email" placeholder="Institute email" required>
+        <input name="contact" placeholder="Contact">
+        <button>Login</button>
+      </form>
+    </section>
+
+    <section id="profileBox" class="hidden">
+      <div id="avatar">CB</div>
+      <strong id="profileName"></strong>
+      <span id="profileRole"></span>
+      <button id="logout">Switch account</button>
+    </section>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <small id="kicker">Live campus coordination</small>
+        <h2 id="pageTitle">Buzz Feed</h2>
+      </div>
+      <span id="live">Live</span>
+    </header>
+
+    <section id="feed" class="view active">
+      <form id="postForm" class="composer">
+        <input name="title" placeholder="Post title" required>
+        <select name="tag">
+          <option>#foodsplit</option>
+          <option>#cabsplit</option>
+          <option>#resell</option>
+          <option>#lost</option>
+          <option>#found</option>
+        </select>
+        <input name="minutes" type="number" value="1440" min="10" max="2880">
+        <input name="image" placeholder="Image URL">
+        <textarea name="body" placeholder="Description" required></textarea>
+        <button>Publish</button>
+      </form>
+
+      <div class="layout">
+        <section>
+          <div class="bar">
+            <h3>Campus Feed</h3>
+            <select id="filter">
+              <option value="all">All</option>
+              <option>#foodsplit</option>
+              <option>#cabsplit</option>
+              <option>#resell</option>
+              <option>#lost</option>
+              <option>#found</option>
+            </select>
+          </div>
+          <div id="posts"></div>
+        </section>
+
+        <section class="panel">
+          <h3>Live Room</h3>
+          <div id="roomEmpty">Open a chat-based post to coordinate.</div>
+          <div id="room" class="hidden">
+            <strong id="roomTitle"></strong>
+            <p id="roomMeta"></p>
+            <div id="messages"></div>
+            <form id="chatForm">
+              <input name="text" placeholder="Message" required>
+              <button>Send</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="official" class="view">
+      <div class="layout">
+        <section><h3>Official Updates</h3><div id="officialList"></div></section>
+        <section class="panel">
+          <h3>Club/Admin Post</h3>
+          <form id="officialForm">
+            <input name="title" placeholder="Title" required>
+            <textarea name="body" placeholder="Text, link, or Google Form" required></textarea>
+            <button>Post Update</button>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section id="calendar" class="view">
+      <div class="layout">
+        <section><h3>Events</h3><div id="events"></div></section>
+        <section class="panel">
+          <h3>Create Event</h3>
+          <form id="eventForm">
+            <input name="title" placeholder="Event title" required>
+            <input name="date" type="date" required>
+            <input name="time" type="time" required>
+            <input name="venue" placeholder="Venue" required>
+            <textarea name="body" placeholder="Description"></textarea>
+            <button>Submit Event</button>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section id="complaints" class="view">
+      <div class="layout">
+        <section><h3>Anonymous Complaints</h3><div id="complaintList"></div></section>
+        <section class="panel">
+          <h3>Raise Complaint</h3>
+          <form id="complaintForm">
+            <input name="title" placeholder="Issue title" required>
+            <textarea name="body" placeholder="Issue details" required></textarea>
+            <button>Raise Anonymously</button>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section id="admin" class="view">
+      <div class="metrics">
+        <div><span>Active Posts</span><strong id="mPosts">0</strong></div>
+        <div><span>Open Complaints</span><strong id="mComplaints">0</strong></div>
+        <div><span>Pending Events</span><strong id="mEvents">0</strong></div>
+      </div>
+      <div class="layout">
+        <section><h3>Moderate Posts</h3><div id="adminPosts"></div></section>
+        <section><h3>Admin Queue</h3><div id="adminQueue"></div></section>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="hidden"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
