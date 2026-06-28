@@ -13,5 +13,5 @@ To ensure a lightweight, fast, and dependency-free backend for this MVP, the fol
 * **JSON File-System Database:** For this MVP, data is persisted locally in `data/db.json` with a seeder script that auto-generates the required mock profiles and initial posts upon the first launch.
 
 
-  Acess to the project directly through rander link https://buildverse-ng0j.onrender.com
+  Acess to the project directly through render link https://buildverse-ng0j.onrender.com
   
